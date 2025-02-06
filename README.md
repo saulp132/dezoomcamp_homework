@@ -46,6 +46,27 @@ on g."DOLocationID" = zdo."LocationID"
 where CAST(g.lpep_pickup_datetime AS DATE) > '2019-09-30' and CAST(g.lpep_pickup_datetime AS DATE) < '2019-11-01' and zpu."Zone" = 'East Harlem North'
 order by  g.tip_amount DESC;
 
-### Homework 2
+# Homework 2
+
+6.	How would you configure the timezone to New York in a Schedule trigger?
+•	Add a timezone property set to EST in the Schedule trigger configuration
+•	Add a timezone property set to America/New_York in the Schedule trigger configuration
+•	Add a timezone property set to UTC-5 in the Schedule trigger configuration
+•	Add a location property set to New_York in the Schedule trigger configuration
+•	  - id: EST
+•	    type: io.kestra.plugin.core.trigger.Schedule
+•	    cron: "0 10 1 * *"
+•	    timezone: EST
+•	
+•	  - id: America_New_York
+•	    type: io.kestra.plugin.core.trigger.Schedule
+•	    cron: "0 10 1 * *"
+•	    timezone:  America/New_York
+•	
+•	  - id: UTC_5 
+•	    type: io.kestra.plugin.core.trigger.Schedule
+•	    cron: "0 10 1 * *"
+•	    timezone: UTC-5 
+
 
 
