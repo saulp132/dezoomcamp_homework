@@ -49,24 +49,32 @@ order by  g.tip_amount DESC;
 # Homework 2
 
 6.	How would you configure the timezone to New York in a Schedule trigger?
+
+   
 •	Add a timezone property set to EST in the Schedule trigger configuration
+
+  - id: EST
+	  type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 10 1 * *"
+    timezone: EST
+
 •	Add a timezone property set to America/New_York in the Schedule trigger configuration
+
+	  - id: America_New_York
+	    type: io.kestra.plugin.core.trigger.Schedule
+      cron: "0 10 1 * *"
+	    timezone:  America/New_York
+     
 •	Add a timezone property set to UTC-5 in the Schedule trigger configuration
+
+  	- id: UTC_5 
+	    type: io.kestra.plugin.core.trigger.Schedule
+	    cron: "0 10 1 * *"
+	    timezone: UTC-5 
+
+
+
 •	Add a location property set to New_York in the Schedule trigger configuration
-•	  - id: EST
-•	    type: io.kestra.plugin.core.trigger.Schedule
-•	    cron: "0 10 1 * *"
-•	    timezone: EST
-•	
-•	  - id: America_New_York
-•	    type: io.kestra.plugin.core.trigger.Schedule
-•	    cron: "0 10 1 * *"
-•	    timezone:  America/New_York
-•	
-•	  - id: UTC_5 
-•	    type: io.kestra.plugin.core.trigger.Schedule
-•	    cron: "0 10 1 * *"
-•	    timezone: UTC-5 
 
 
 
